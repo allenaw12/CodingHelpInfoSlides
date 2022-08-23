@@ -1,0 +1,181 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+    box-sizing: border-box;
+  }
+  
+  /* img{
+    width: 100%;
+  } */
+/******************************************
+/* LAYOUT
+/*******************************************/
+h3.question {
+    background-color: rgb(124, 209, 237);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    transition: 0.4s;
+    margin-bottom: 10px;
+}
+h3.question:active, h3.question:hover {
+    background-color: rgb(69, 244, 218);
+}
+/*unicode char + sign*/
+h3.question:before{
+    content: '\2795';
+    font-size: 15px;
+}
+h3.question.active:before{
+    content:'\2796'
+}
+p.answer{
+    padding: 0 18px;
+    /* background-color: bisque; */
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+    margin-bottom: 10px;
+}
+p.answer.show{
+    opacity: 1;
+    max-height:fit-content;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+#text {
+display: none;
+position: absolute;
+background-color: rgba(0, 0, 0, 0.8);
+color: white;
+top: 70%;
+padding: .5rem;
+border-radius: 20%;
+}
+
+a{
+text-decoration: none;
+}
+
+
+/*https://css-tricks.com/css-only-carousel/*/
+/*copied*/
+.prev,
+.next,
+.prevThumbs,
+.nextThumbs {
+cursor: pointer;
+position: absolute;
+/* top: 40%; */
+width: auto;
+/* margin-top: -22px; */
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 20px;
+transition: all 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+.prev:hover,
+.next:hover,
+.prevThumbs:hover,
+.nextThumbs:hover {
+background-color: rgba(0, 0, 0, 0.8);
+color: white;
+}
+
+.prev {
+left: 2px;
+}
+.prevThumbs {
+left: 0;
+color: black;
+}
+.next {
+right: 2px;
+}
+.nextThumbs {
+right: 0;
+color: black;
+}
+
+.dots-container {
+width: 80%;
+margin: 0 auto;
+display: flex;
+flex-direction: row;
+overflow-x: auto;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 1rem 0 1rem 0;
+overscroll-behavior-inline: contain;
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+.dots-container::-webkit-scrollbar {
+display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.dots-container .dot {
+display: flex;
+flex: 1 0 3rem;
+cursor: pointer;
+margin: .3rem;
+width: 3rem;
+height: 3rem;
+color: #333;
+border-radius: 40%;
+/* box-shadow: .2rem .2rem .4rem rgba(51, 49, 49, 0.9); */
+}
+
+.dots-container .dot.active {
+border: 3px solid rgb(42, 192, 42);
+}
+/*snaps individual thumbnails to start*/
+.snaps-inline {
+scroll-snap-type: inline mandatory;
+scroll-padding-inline: .3rem;
+}
+.snaps-inline > * {
+scroll-snap-align: start;
+}
+
+
+* {
+padding: 0;
+border: 0;
+box-sizing: border-box;
+}
+
+body {
+height: 100%;
+/*   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+}
+
+body h1 {
+text-align: center;
+}
+
+.slide-container {
+display: flex;
+justify-content: center;
+align-items: center;
+max-width: 90%;
+margin: auto;
+position: relative;
+transition: 0.5s linear;
+}
+
+.slide-container img {
+width: 50%;
+}
