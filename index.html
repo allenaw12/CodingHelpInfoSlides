@@ -11,32 +11,21 @@
 </head>
 <body>
     <h1>What is MVC?</h1>
-    <section id="container">
-        <section class="slide-container snaps-inline">
+    <section class="slide-container snaps-inline">
             <img class="slide fade main-img" src="MVCDiagram.png" alt="white grey and blue diagram with arrow depicting how a client request moves thru the MVC architecture">
-            
-            <!-- <p id="text"></p>
-            <a href="#" class="prev" title="Previous">&#10094</a>
-            <a href="#" class="next" title="Next">&#10095</a>
-        </section>
-        <section>
-            <div class="dots-container snaps-inline">
-                <img class="dot" src="" alt=""> -->
-                <!-- <span class="dot"></span> -->
-<!--             
-                <a href="#" class="prevThumbs" title="Previous">&#10094</a>
-                <a href="#" class="nextThumbs" title="Next">&#10095</a>
-            </div> -->
-        </section>
+    </section><!--
+    --><section class="question-container">
+        <h3 class="question">What is MVC?</h3>
+        <p class="answer">MVC is short for Model, View, Controller, an architectural paradigm used in many languages to organize files for a website's backend. Look below for some specifics!</p>
+        <h3 class="question">Explain that diagram over there, what's the flow of a request using the MVC structure?</h3>
+        <p class="answer">First a client makes a request thru the browser. The browser sends that request to the router for route processing, the CRUD methods(Get, Post, Put, Delete) we all love, and the router decides what Contoller to send that request to. Once that controller or server hears that request, if needed it will access the database or Model to change, remove, or add information in the database. The database then responds back to the controller that all is well, or if there's an error. The controller will then talk to the view to render that response and send it back to the client in the browser.</p>
+        <h3 class="question">So, what is the Model in MVC?</h3>
+        <p class="answer">Model refers to any code pertaining to the database portion of a websites' request. Any changes, updates, general requests, all that code is placed in the Model file. The model, or database, only speaks to the controller.</p>
+        <h3 class="question">So, what is the View in MVC?</h3>
+        <p class="answer">View refers to anything that the client will see, basic HTML, CSS, and Javascript, as well as images. This file will talk only to the controller and render thru it, or it will get information from the controller and then render it directly to the client, depending on the language.</p>
+        <h3 class="question">So, what is the Controller in MVC?</h3>
+        <p class="answer">Controller refers to the middleman of the files, it connects the client/router to the database/model and to the view. Through the controller is the only way for the client and view to access the Model or database.</p>
     </section>
-    <h3 class="question">What is MVC?</h3>
-    <p class="answer">MVC is short for Model, View, Controller, an architural paradigm used in many languages to organize files for a website's backend. Look below for some specifics!</p>
-    <h3 class="question">So, what is the Model in MVC?</h3>
-    <p class="answer">Model refers to any code pertaining to the database portion of a websites request. Any changes, updates, general requests, all that code is placed in the Model file. The model, or database, only speaks to the controller.</p>
-    <h3 class="question">So, what is the View in MVC?</h3>
-    <p class="answer">View refers to anything that the client will see, basic HTML, CSS, and Javascript, as well as images. This file will talk to the controller, or directly to the client, depending onthe language.</p>
-    <h3 class="question">So, what is the Controller in MVC?</h3>
-    <p class="answer">Controller refers to the middleman of the files, it connects the client/router to the database/model and to the view. Through the controller is the only way for the client and view to access the Model or database.</p>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
